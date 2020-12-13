@@ -1,0 +1,25 @@
+{
+  "presets": [
+    [  
+      // 基本的JS兼容性处理
+      "@babel/preset-env",
+
+      // 高级语法JS的兼容性处理
+      {
+        "useBuiltIns": "usage",
+        "corejs": {
+          // 指定core-js版本
+          "version": 3
+        },
+        // 指定兼容性适配到哪个版本
+        "targets": {
+          "chrome": "60",
+          "firefox": "60",
+          "ie": "9",
+          "safari": "10",
+          "edge": "17"
+        }
+      }
+    ]
+  ] // 这里必须是 presets
+}
